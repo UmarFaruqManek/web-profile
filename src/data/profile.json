@@ -1,0 +1,10 @@
+{
+  "name": "Dr. John Doe",
+  "title": "Associate Professor",
+  "department": "Computer Science",
+  "bio": "Experienced researcher in AI and Machine Learning.",
+  "email": "john.doe@university.ac.id",
+  "phone": "+62 812 3456 7890",
+  "website": "https://johndoe.com",
+  "image": "https://via.placeholder.com/150"
+}

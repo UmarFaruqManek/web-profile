@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "code": "CS401",
+    "name": "Advanced Machine Learning",
+    "semester": "Odd 2023/2024",
+    "description": "Graduate level course covering deep learning architectures."
+  },
+  {
+    "id": 2,
+    "code": "CS202",
+    "name": "Data Structures and Algorithms",
+    "semester": "Even 2023/2024",
+    "description": "Fundamental course for undergraduate students."
+  },
+  {
+    "code": "awda",
+    "name": "wdawda",
+    "semester": "wdawd",
+    "description": "awdawdaw",
+    "id": 1764927510566
+  }
+]

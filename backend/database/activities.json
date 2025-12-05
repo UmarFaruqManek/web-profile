@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "International Conference on AI",
+    "image": "https://images.unsplash.com/photo-1544531586-fde5298cdd40?auto=format&fit=crop&q=80&w=1000",
+    "description": "Presented a keynote speech on the future of deep learning in healthcare.",
+    "date": "2023-11-15",
+    "location": "Bali, Indonesia",
+    "info": "Keynote Speaker"
+  },
+  {
+    "id": 2,
+    "title": "Student Hackathon Mentoring",
+    "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1000",
+    "description": "Mentored 10 teams during a 24-hour hackathon focused on smart city solutions.",
+    "date": "2023-09-20",
+    "location": "Jakarta",
+    "info": "Mentor"
+  }
+]

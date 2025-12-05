@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "degree": "Ph.D. in Computer Science",
+    "institution": "University of Edinburgh",
+    "year": "2015 - 2019",
+    "description": "Thesis: Advanced Neural Networks for Medical Imaging"
+  },
+  {
+    "id": 2,
+    "degree": "M.Sc. in Artificial Intelligence",
+    "institution": "Institut Teknologi Bandung",
+    "year": "2012 - 2014",
+    "description": "Graduated with Distinction"
+  },
+  {
+    "id": 3,
+    "degree": "B.Sc. in Informatics",
+    "institution": "Universitas Indonesia",
+    "year": "2008 - 2012",
+    "description": "Best Graduate Award"
+  },
+  {
+    "degree": "ddd",
+    "institution": "dd",
+    "year": "1231",
+    "description": "dadaw",
+    "id": 1764927489505
+  }
+]

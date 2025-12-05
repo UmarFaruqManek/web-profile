@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Machine Learning",
+    "level": "Expert"
+  },
+  {
+    "id": 2,
+    "name": "Deep Learning",
+    "level": "Expert"
+  },
+  {
+    "id": 3,
+    "name": "Python",
+    "level": "Expert"
+  },
+  {
+    "id": 4,
+    "name": "React & Node.js",
+    "level": "Intermediate"
+  },
+  {
+    "id": 5,
+    "name": "Data Visualization",
+    "level": "Advanced"
+  },
+  {
+    "name": "dawda",
+    "level": "wdawdawdaw",
+    "id": 1764927505022
+  }
+]
