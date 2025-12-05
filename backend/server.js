@@ -12,7 +12,10 @@ dotenv.config();
 
 import authRoutes from "./routes/authRoutes.js";
 import profileRoutes from "./routes/profileRoutes.js";
+import messageRoutes from "./routes/messageRoutes.js";
+import statsRoutes from "./routes/statsRoutes.js";
 import createRouter from "./routes/genericRoutes.js";
+import { visitorCounter } from "./middleware/visitorCounter.js";
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -21,6 +24,9 @@ app.use(cors());
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
 
+// Visitor Counter Middleware
+app.use(visitorCounter);
+
 // Serve static files from the React app
 const distPath = path.join(__dirname, "../dist");
 app.use(express.static(distPath));
@@ -28,6 +34,9 @@ app.use(express.static(distPath));
 // API Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/profile", profileRoutes);
+app.use("/api/messages", messageRoutes);
+app.use("/api/stats", statsRoutes);
+
 app.use("/api/education", createRouter("education.json"));
 app.use("/api/skills", createRouter("skills.json"));
 app.use("/api/courses", createRouter("courses.json"));

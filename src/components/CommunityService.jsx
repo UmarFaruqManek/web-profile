@@ -3,11 +3,14 @@ import Section from "./Section";
 import { Users } from "lucide-react";
 import { motion } from "framer-motion";
 
+import { useLanguage } from "../context/LanguageContext";
+
 const CommunityService = ({ data }) => {
+  const { t } = useLanguage();
   return (
     <Section
       id="community-service"
-      title="Community Service"
+      title={t("service.title")}
       className="bg-white dark:bg-gray-800 transition-colors duration-300"
     >
       <div className="space-y-4">

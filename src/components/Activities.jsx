@@ -4,7 +4,10 @@ import api from "../services/api";
 import { Calendar, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 
+import { useLanguage } from "../context/LanguageContext";
+
 const Activities = () => {
+  const { t } = useLanguage();
   const [activities, setActivities] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -30,7 +33,7 @@ const Activities = () => {
       >
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-12 text-center">
-            My Activities
+            {t("activities.title")}
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[1, 2, 3].map((i) => (
@@ -65,7 +68,7 @@ const Activities = () => {
           className="flex items-center justify-center gap-4 mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white relative">
-            My Activities
+            {t("activities.title")}
             <span className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-1/2 h-1.5 bg-blue-500 rounded-full"></span>
           </h2>
         </motion.div>
@@ -118,7 +121,7 @@ const Activities = () => {
                   </p>
 
                   <div className="mt-auto pt-4 border-t border-gray-100 dark:border-gray-700 flex items-center gap-2 text-sm text-blue-600 dark:text-blue-400 font-medium group-hover:translate-x-2 transition-transform">
-                    <span>Read More</span>
+                    <span>{t("activities.read_more")}</span>
                     <svg
                       className="w-4 h-4"
                       fill="none"
@@ -141,7 +144,7 @@ const Activities = () => {
 
         {activities.length === 0 && (
           <div className="text-center text-gray-500 dark:text-gray-400 py-12">
-            No activities found.
+            {t("activities.no_activities")}
           </div>
         )}
       </div>

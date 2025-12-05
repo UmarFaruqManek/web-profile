@@ -3,11 +3,14 @@ import Section from "./Section";
 import { Book } from "lucide-react";
 import { motion } from "framer-motion";
 
+import { useLanguage } from "../context/LanguageContext";
+
 const Courses = ({ data }) => {
+  const { t } = useLanguage();
   return (
     <Section
       id="courses"
-      title="Teaching"
+      title={t("teaching.title")}
       className="bg-gray-50 dark:bg-gray-900 transition-colors duration-300"
     >
       <div className="grid md:grid-cols-2 gap-6">

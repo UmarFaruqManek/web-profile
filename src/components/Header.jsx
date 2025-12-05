@@ -1,10 +1,13 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Mail, Linkedin, BookOpen, Globe } from "lucide-react";
+import { Mail, Linkedin, BookOpen, Globe, Download } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
+import LanguageToggle from "./LanguageToggle";
 import { motion } from "framer-motion";
+import { useLanguage } from "../context/LanguageContext";
 
 const Header = ({ profile }) => {
+  const { t } = useLanguage();
   const location = useLocation();
   const isHome = location.pathname === "/";
 
@@ -151,7 +154,21 @@ const Header = ({ profile }) => {
                   <span>SINTA</span>
                 </a>
               )}
-              <div className="ml-2">
+
+              {profile.cv_url && (
+                <a
+                  href={profile.cv_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 px-5 py-2.5 rounded-full transition shadow-lg hover:shadow-blue-500/50 hover:scale-105 active:scale-95 duration-200"
+                >
+                  <Download size={18} />
+                  <span>{t("hero.download_cv")}</span>
+                </a>
+              )}
+
+              <div className="ml-2 flex gap-2">
+                <LanguageToggle />
                 <ThemeToggle />
               </div>
             </motion.div>
@@ -162,17 +179,17 @@ const Header = ({ profile }) => {
               variants={itemVariants}
             >
               {[
-                { name: "Home", link: "/" },
-                { name: "About", link: "#about" },
-                { name: "Education", link: "#education" },
-                { name: "Skills", link: "#skills" },
-                { name: "Teaching", link: "#courses" },
-                { name: "Publications", link: "#publications" },
-                { name: "Research", link: "#research" },
-                { name: "Service", link: "#community-service" },
-                { name: "Certifications", link: "#certifications" },
-                { name: "Gallery", link: "#gallery" },
-                { name: "Activities", link: "#activities" },
+                { name: t("nav.home"), link: "/" },
+                { name: t("nav.about"), link: "#about" },
+                { name: t("nav.education"), link: "#education" },
+                { name: t("nav.skills"), link: "#skills" },
+                { name: t("nav.teaching"), link: "#courses" },
+                { name: t("nav.publications"), link: "#publications" },
+                { name: t("nav.research"), link: "#research" },
+                { name: t("nav.service"), link: "#community-service" },
+                { name: t("nav.certifications"), link: "#certifications" },
+                { name: t("nav.gallery"), link: "#gallery" },
+                { name: t("nav.activities"), link: "#activities" },
               ].map((item) =>
                 item.link.startsWith("/") ? (
                   <Link

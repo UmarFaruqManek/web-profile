@@ -11,6 +11,7 @@ import Dashboard from "./pages/admin/Dashboard";
 import ProfileEditor from "./pages/admin/ProfileEditor";
 
 import SectionEditor from "./pages/admin/SectionEditor";
+import Messages from "./pages/admin/Messages";
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
@@ -80,6 +81,7 @@ function App() {
         <Route element={<ProtectedRoute />}>
           <Route path="/admin" element={<AdminLayout />}>
             <Route path="dashboard" element={<Dashboard />} />
+            <Route path="messages" element={<Messages />} />
             <Route path="profile" element={<ProfileEditor />} />
             <Route
               path="education"

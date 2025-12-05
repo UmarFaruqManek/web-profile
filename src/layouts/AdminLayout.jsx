@@ -12,6 +12,7 @@ import {
   Award,
   Image,
   LogOut,
+  Mail,
 } from "lucide-react";
 
 const AdminLayout = () => {
@@ -29,6 +30,7 @@ const AdminLayout = () => {
       icon: <LayoutDashboard size={20} />,
       label: "Dashboard",
     },
+    { path: "/admin/messages", icon: <Mail size={20} />, label: "Messages" },
     { path: "/admin/profile", icon: <User size={20} />, label: "Profile" },
     {
       path: "/admin/education",

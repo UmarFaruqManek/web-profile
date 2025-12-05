@@ -170,6 +170,58 @@ const ProfileEditor = () => {
               className="w-full p-2 border rounded"
             />
           </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Citations
+            </label>
+            <input
+              name="citations"
+              type="number"
+              value={formData.citations || ""}
+              onChange={handleChange}
+              className="w-full p-2 border rounded"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              H-Index
+            </label>
+            <input
+              name="h_index"
+              type="number"
+              value={formData.h_index || ""}
+              onChange={handleChange}
+              className="w-full p-2 border rounded"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              i10-Index
+            </label>
+            <input
+              name="i10_index"
+              type="number"
+              value={formData.i10_index || ""}
+              onChange={handleChange}
+              className="w-full p-2 border rounded"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              CV / Resume (PDF URL)
+            </label>
+            <input
+              name="cv_url"
+              value={formData.cv_url || ""}
+              onChange={handleChange}
+              placeholder="Paste PDF link or upload via backend (future)"
+              className="w-full p-2 border rounded"
+            />
+            <p className="text-xs text-gray-500 mt-1">
+              *For now, please upload your CV to Google Drive/Dropbox and paste
+              the link here.
+            </p>
+          </div>
         </div>
         <button
           type="submit"

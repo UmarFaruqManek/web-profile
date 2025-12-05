@@ -5,7 +5,10 @@ import { Calendar, MapPin, Info, ArrowLeft } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
+import { useLanguage } from "../context/LanguageContext";
+
 const ActivityDetail = () => {
+  const { t } = useLanguage();
   const { id } = useParams();
   const [activity, setActivity] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -48,7 +51,7 @@ const ActivityDetail = () => {
           Activity not found
         </h2>
         <Link to="/" className="text-blue-600 hover:underline">
-          Back to Home
+          {t("activity_detail.back")}
         </Link>
       </div>
     );
@@ -64,7 +67,7 @@ const ActivityDetail = () => {
             className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 mb-8 font-medium"
           >
             <ArrowLeft size={20} />
-            Back to Home
+            {t("activity_detail.back")}
           </Link>
 
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
@@ -105,7 +108,7 @@ const ActivityDetail = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer profile={profile} />
     </>
   );
 };

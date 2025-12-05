@@ -3,11 +3,14 @@ import Section from "./Section";
 import { GraduationCap } from "lucide-react";
 import { motion } from "framer-motion";
 
+import { useLanguage } from "../context/LanguageContext";
+
 const Education = ({ data }) => {
+  const { t } = useLanguage();
   return (
     <Section
       id="education"
-      title="Education"
+      title={t("education.title")}
       className="bg-gray-50 dark:bg-gray-900 transition-colors duration-300"
     >
       <div className="space-y-6 max-w-4xl">

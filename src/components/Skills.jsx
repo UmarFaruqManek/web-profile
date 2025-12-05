@@ -1,11 +1,14 @@
 import React from "react";
 import Section from "./Section";
 
+import { useLanguage } from "../context/LanguageContext";
+
 const Skills = ({ data }) => {
+  const { t } = useLanguage();
   return (
     <Section
       id="skills"
-      title="Skills"
+      title={t("skills.title")}
       className="bg-white dark:bg-gray-800 transition-colors duration-300"
     >
       <div className="flex flex-wrap gap-3">

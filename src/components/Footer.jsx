@@ -1,6 +1,8 @@
-import React from 'react';
+import React from "react";
+import { useLanguage } from "../context/LanguageContext";
 
 const Footer = ({ profile }) => {
+  const { t } = useLanguage();
   if (!profile) return null;
 
   return (
@@ -12,7 +14,7 @@ const Footer = ({ profile }) => {
           {/* Social Links could go here again or just copyright */}
         </div>
         <p className="text-sm">
-          © {new Date().getFullYear()} {profile.name}. All rights reserved.
+          © {new Date().getFullYear()} {profile.name}. {t("footer.rights")}
         </p>
       </div>
     </footer>

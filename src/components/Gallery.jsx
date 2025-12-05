@@ -2,11 +2,14 @@ import React from "react";
 import Section from "./Section";
 import { motion } from "framer-motion";
 
+import { useLanguage } from "../context/LanguageContext";
+
 const Gallery = ({ data }) => {
+  const { t } = useLanguage();
   return (
     <Section
       id="gallery"
-      title="Gallery"
+      title={t("gallery.title")}
       className="bg-white dark:bg-gray-800 transition-colors duration-300"
     >
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

@@ -3,11 +3,14 @@ import Section from "./Section";
 import { FileText, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 
+import { useLanguage } from "../context/LanguageContext";
+
 const Publications = ({ data }) => {
+  const { t } = useLanguage();
   return (
     <Section
       id="publications"
-      title="Publications"
+      title={t("publications.title")}
       className="bg-white dark:bg-gray-800 transition-colors duration-300"
     >
       <div className="space-y-4">

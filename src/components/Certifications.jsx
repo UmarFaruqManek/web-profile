@@ -3,11 +3,14 @@ import Section from "./Section";
 import { Award } from "lucide-react";
 import { motion } from "framer-motion";
 
+import { useLanguage } from "../context/LanguageContext";
+
 const Certifications = ({ data }) => {
+  const { t } = useLanguage();
   return (
     <Section
       id="certifications"
-      title="Certifications"
+      title={t("certifications.title")}
       className="bg-gray-50 dark:bg-gray-900 transition-colors duration-300"
     >
       <div className="grid md:grid-cols-2 gap-4">

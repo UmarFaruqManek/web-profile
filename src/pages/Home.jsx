@@ -22,6 +22,7 @@ import CommunityService from "../components/CommunityService";
 import Certifications from "../components/Certifications";
 import Gallery from "../components/Gallery";
 import Activities from "../components/Activities";
+import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
 const Home = () => {
@@ -93,9 +94,9 @@ const Home = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans text-gray-900">
+    <main className="min-h-screen bg-gray-50 font-sans text-gray-900">
       <Header profile={data.profile} />
-      <About bio={data.profile?.bio} />
+      <About profile={data.profile} />
       <Education data={data.education} />
       <Skills data={data.skills} />
       <Courses data={data.courses} />
@@ -105,8 +106,9 @@ const Home = () => {
       <Certifications data={data.certifications} />
       <Gallery data={data.gallery} />
       <Activities />
+      <Contact profile={data.profile} />
       <Footer profile={data.profile} />
-    </div>
+    </main>
   );
 };
 
