@@ -9,7 +9,9 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import AdminLayout from "./layouts/AdminLayout";
 import Dashboard from "./pages/admin/Dashboard";
 import ProfileEditor from "./pages/admin/ProfileEditor";
+
 import SectionEditor from "./pages/admin/SectionEditor";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const sectionConfigs = {
@@ -66,8 +68,9 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
       <Toaster position="top-right" />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/activities/:id" element={<ActivityDetail />} />
