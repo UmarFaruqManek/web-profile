@@ -159,6 +159,6 @@ Build the frontend and serve it via the backend (how it runs in deployment).
 
 **Supported Sections**: `education`, `skills`, `courses`, `publications`, `research`, `community-service`, `certifications`, `gallery`, `activities`.
 
-## 📝 License
+
 
 
