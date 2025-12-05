@@ -161,4 +161,4 @@ Build the frontend and serve it via the backend (how it runs in deployment).
 
 ## 📝 License
 
-This project is open source and available under the [MIT License](LICENSE).
+
